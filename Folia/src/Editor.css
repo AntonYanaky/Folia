@@ -1,0 +1,50 @@
+.textParent {
+  display: flex;
+  flex-direction: column;
+  height: 89vh;    
+  box-sizing: border-box;
+
+}
+
+.fileInfo{
+    border-top: 1px solid var(--medium-green);
+}
+
+.topBar{
+  display: flex;
+  justify-content: space-between; /* This is the key property */
+  align-items: center;            /* Vertically aligns items, which is good practice */
+
+  border-bottom: 1px solid var(--medium-green);
+}
+
+.file {
+    transform: translateY(-4px);
+}
+
+.fileButton{
+    padding:0.25em;
+    margin:0;
+}
+
+.editorNameSeperator {
+  margin: 0;
+}
+
+.textArea {
+  flex-grow: 1;
+  resize: none;
+  
+  background-color: transparent;
+  border: none;
+  outline: none;
+
+  font-family: inherit; 
+  font-size: 1em;
+  color: inherit;
+}
+
+.textArea::placeholder {
+  color: inherit;
+  opacity: 0.8; 
+}
