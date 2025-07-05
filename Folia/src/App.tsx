@@ -45,13 +45,20 @@ function App() {
     }
   }
 
+  const handleCreateNew = () => {
+    navigate('/editor', { state: { filePath: '' } });
+  };
+
   useEffect(() => {
     emit('frontend-ready');
   }, []);
 
   return (
     <Routes>
-      <Route path="/" element={<Home onFileSelect={handleFileSelect} />} />
+      <Route
+        path="/"
+        element={<Home onFileSelect={handleFileSelect} onCreateNew={handleCreateNew} />}
+      />
       <Route path="/editor" element={<Editor />} />
     </Routes>
   );

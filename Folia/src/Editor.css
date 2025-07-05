@@ -1,7 +1,7 @@
 .textParent {
   display: flex;
   flex-direction: column;
-  height: 89vh;    
+  height: 92.5vh;    
   box-sizing: border-box;
 
 }
@@ -12,8 +12,8 @@
 
 .topBar{
   display: flex;
-  justify-content: space-between; /* This is the key property */
-  align-items: center;            /* Vertically aligns items, which is good practice */
+  justify-content: space-between;
+  align-items: center;
 
   border-bottom: 1px solid var(--medium-green);
 }
@@ -47,4 +47,19 @@
 .textArea::placeholder {
   color: inherit;
   opacity: 0.8; 
+}
+
+.saveText {
+    font-size: 0.9em;
+    opacity: 0.8;
+    padding-right: 0.5em;
+}
+
+.error {
+   color: 'red';
+   padding: '1rem';
+}
+
+.exitButton {
+    margin-left: 0.5em;
 }

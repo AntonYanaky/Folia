@@ -2,9 +2,10 @@ import "./App.css";
 
 interface WelcomePageProps {
   onFileSelect: () => void;
+  onCreateNew: () => void;
 }
 
-function Home({ onFileSelect }: WelcomePageProps) {
+function Home({ onFileSelect, onCreateNew }: WelcomePageProps) {
   return (
     <main className="container">
       <h1>Welcome to Folia</h1>
@@ -26,10 +27,15 @@ function Home({ onFileSelect }: WelcomePageProps) {
       <h2>Or</h2>
       <form
         className="row"
-
+        onSubmit={(e) => {
+          e.preventDefault();
+          onCreateNew();
+        }}
       >
-        <button type="submit" className="iconButton">
-
+        <button type="submit" className="icon-button">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M19,11H13V5a1,1,0,0,0-2,0v6H5a1,1,0,0,0,0,2h6v6a1,1,0,0,0,2,0V13h6a1,1,0,0,0,0-2Z"/>
+            </svg>
             <span>Create New</span>
         </button>
       </form>
